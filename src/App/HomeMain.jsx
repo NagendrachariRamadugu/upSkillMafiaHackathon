@@ -1,8 +1,7 @@
+import React from 'react'
+
 const HomeMain = () => {
-    return (
-        <main>
-            HomeMain
-        </main>
-    )
+  return <div>HomeMain</div>
 }
+
 export default HomeMain
