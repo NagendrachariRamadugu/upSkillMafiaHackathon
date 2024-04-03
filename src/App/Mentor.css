@@ -1,0 +1,106 @@
+.mentor-main {
+    padding: 0rem 1rem;
+}
+
+.hero-image {
+    height: 550px;
+    background-image: url('../assets/mentor-hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-image-content {
+    width: 35rem;
+    padding: 1.5rem;
+    border: 1px solid black;
+    transform: translate(40%, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    border: 2px solid gray;
+}
+.teach-us-text {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.become-ins-text {
+    color: gray;
+    font-size: 1rem;
+    margin: 0;
+    padding-bottom: 0.5rem;
+}
+
+.get-started-button {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+}
+
+.reasons {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.start-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.list-reasons {
+    display: flex;
+    padding: 1rem 0rem;
+}
+
+.reason-image {
+    font-size: 3rem;
+}
+
+.reason {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0rem 1rem;
+}
+
+.reason-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.small-text {
+    font-weight: bold;
+}
+
+.small-text,.large-text {
+    font-size: 1rem;
+    color: gray;
+    text-align: center;
+}
+
+.become-mentor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0rem 4rem 0rem;
+    gap: 1.5rem;
+}
+
+
+.make-mentor-text {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.join-teach-community {
+    color: gray;
+    font-size: 1rem;
+}
