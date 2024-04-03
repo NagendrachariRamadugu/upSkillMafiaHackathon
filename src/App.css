@@ -32,6 +32,11 @@ header {
   font-size: 1.5rem;
 }
 
+.logo_link {
+  text-decoration: none;
+  color: black;
+}
+
 header .navbar {
   display: flex;
   flex-direction: row;
@@ -115,29 +120,47 @@ footer {
   gap: 5rem;
 }
 
-.social-media, .contact-info, .email, .person, .gmail, .copy-right-section {
+.social-media,
+.contact-info,
+.email,
+.person,
+.gmail,
+.copy-right-section {
   display: flex;
   flex-direction: column;
 }
 
-.social-media, .contact-info, .email, .copy-right-section {
+.social-media,
+.contact-info,
+.email,
+.copy-right-section {
   gap: 1rem;
 }
 
-.person, .gmail {
+.person,
+.gmail {
   gap: 0.5rem;
 }
-.collab, .contact-info-text, .head {
+.collab,
+.contact-info-text,
+.head {
   font-size: 1.3rem;
   font-weight: bold;
 }
 
-.name, .shake-hand div, .email-image-text div, .gmail, .info, .copy-right-section {
+.name,
+.shake-hand div,
+.email-image-text div,
+.gmail,
+.info,
+.copy-right-section {
   font-size: 1rem;
   color: gray;
 }
 
-.link-to, .email-image-text, .shake-hand {
+.link-to,
+.email-image-text,
+.shake-hand {
   display: flex;
   flex-direction: row;
   gap: 1rem;

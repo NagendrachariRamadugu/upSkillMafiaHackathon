@@ -12,7 +12,7 @@ const Search = () => {
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#657789"
+              stroke="white"
               strokeWidth="3"
               strokeLinecap="round"
               strokeLinejoin="round"

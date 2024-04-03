@@ -19,8 +19,6 @@ const Mentee = () => {
         <div className="MenteeCourses">
           <CourseCard />
           <CourseCard />
-          <CourseCard />
-          <CourseCard />
         </div>
       </div>
     </div>

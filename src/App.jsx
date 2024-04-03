@@ -4,6 +4,7 @@ import Mentee from './App/Mentee.jsx'
 import Mentor from './App/Mentor.jsx'
 import HomeMain from './App/HomeMain.jsx'
 import MenteeLayout from './App/mentee/MenteeLayout.jsx'
+import Profile from './App/mentee/Profile.jsx'
 
 import { Routes, Route } from 'react-router-dom'
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/mentee" element={<MenteeLayout />}>
             {/* Children */}
             <Route index element={<Mentee />}></Route>
+            <Route path="/mentee/profile/:id" element={<Profile />}></Route>
           </Route>
         </Route>
       </Routes>

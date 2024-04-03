@@ -1,49 +1,29 @@
+import ReadMoreP from './ReadmoreP'
+import { Link } from 'react-router-dom'
+
 const CourseCard = () => {
   return (
-    <div className="card-container">
-      <a href="/" className="hero-image-container">
-        <img
-          className="hero-image CardImg"
-          src="https://imgs.search.brave.com/SADm-9nTSFvPnrkfopdVJgEnZtaZmibeSK4U1ZNc3_g/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9kdG12/YW1haHM0MHV4LmNs/b3VkZnJvbnQubmV0/L2dsLWFjYWRlbXkv/Y291cnNlL2NvdXJz/ZS0xNTk3LUdyb3Vw/JTIwMjkzMC5qcGc"
-          alt="Spinning glass cube"
-        />
-      </a>
-      <main className="main-content">
-        <h1>
-          <a href="#">Prompt Engineering</a>
-        </h1>
-        <p>Our Equilibrium collection promotes balance and calm.</p>
-        <div className="flex-row">
-          <div className="coin-base">
-            <img
-              src="https://imgs.search.brave.com/ogS9ouhxKWCa8oqMS_QRFTuEyHsj-OXjMtvV3BJsmpA/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jbGlw/YXJ0bWFnLmNvbS9p/bWFnZXMvZ29sZC1z/dGFyLXBpY3R1cmUt/MzEucG5n"
-              alt="Ethereum"
-              className="small-image CardImg"
-            />
-            <h2>4.5</h2>
-          </div>
-          <div className="time-left">
-            <img
-              src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png"
-              alt="clock"
-              className="small-image CardImg"
-            />
-            <p>7 days</p>
-          </div>
+    <div className="M_CourseCard">
+      <div className="M_ImageSection">
+        <img src="https://imgs.search.brave.com/lhywHX7cYa_OH-8TsplmD1AqlZ3jQeZnMQIOpynG5TY/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy9k/L2Q3L0xlb25oYXJk/X0V1bGVyLmpwZw" />
+        <Link to={'/mentee/profile/euler'} className="M_View_Profile">
+          View Profile
+        </Link>
+      </div>
+      <div className="M_InfoSection">
+        <div className="M_Title">
+          <h3 className="M_Title_h">Leonhard Euler</h3>
+          <h3 className="M_Star">( 5⭐ )</h3>
         </div>
-      </main>
-      <div className="card-attribute">
-        <img
-          src="https://i.postimg.cc/SQBzNQf1/image-avatar.png"
-          alt="avatar"
-          className="small-avatar CardImg"
+        <ReadMoreP
+          text=" I am a mathematician and physicist from the 18th century. I have dedicated my life to exploring the intricate beauty of mathematics and its applications to the natural world."
+          maxLength={200}
         />
-        <p>
-          Creation of{' '}
-          <span>
-            <a href="#">Jules Wyvern</a>
-          </span>
-        </p>
+        <div className="M_Skills_Container">
+          <h1 className="skillChip_Small">Geometry</h1>
+          <h1 className="skillChip_Small">Legendary</h1>
+          <h1 className="skillChip_Small">Calculus</h1>
+        </div>
       </div>
     </div>
   )

@@ -14,7 +14,11 @@ const HomeHeader = () => {
   return (
     <header>
       <div className="innerContainer">
-        <div className="logo">Byte Benders</div>
+        <div className="logo">
+          <Link to={'/'} className="logo_link">
+            Byte Benders
+          </Link>
+        </div>
         <div className="navbar">
           <Link to="/mentor" className="button">
             Become mentor
