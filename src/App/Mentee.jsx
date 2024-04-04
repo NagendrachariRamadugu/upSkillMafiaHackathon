@@ -1,6 +1,6 @@
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
-import './Mentee.css'
+import './mentee.css'
 import MenteeSearch from './mentee/Filter'
 import Search from './mentee/Search'
 import CourseCard from './mentee/CourseCard'
