@@ -21,15 +21,15 @@ const Footer = () => {
                   <div className="person">
                     <div className="name">Nagendra Chari Ramadugu</div>
                     <div className="link-to">
-                      <Link to = 'https://www.linkedin.com/in/ramadugu-nagendra-chari-60199b225/'><FaLinkedin /></Link>
-                      <Link to = 'https://github.com/NagendrachariRamadugu'><FaGithub /></Link>
+                      <Link to = 'https://www.linkedin.com/in/ramadugu-nagendra-chari-60199b225/'><FaLinkedin className = 'linkedin'/></Link>
+                      <Link to = 'https://github.com/NagendrachariRamadugu'><FaGithub className = 'git-hub'/></Link>
                     </div>
                   </div>
                   <div className="person">
                     <div className="name">Krishna Pedakolimi</div>
                     <div className="link-to">
-                      <Link to = 'https://www.linkedin.com/in/krishna-pedakolimi-581639287/'><FaLinkedin /></Link>
-                      <Link to = 'https://github.com/PhyG0'><FaGithub /></Link>
+                      <Link to = 'https://www.linkedin.com/in/krishna-pedakolimi-581639287/'><FaLinkedin className = 'linkedin'git-hub/></Link>
+                      <Link to = 'https://github.com/PhyG0'><FaGithub className = 'git-hub'/></Link>
                     </div>
                   </div>
               </div>
@@ -58,32 +58,5 @@ const Footer = () => {
   )
 }
 
-const styles = {
-  footer: {
-    backgroundColor: '#f2f2f2',
-    padding: '20px 0',
-    marginTop: 'auto',
-    border: '1px solid black',
-    height: '200px'
-  },
-  container: {
-    maxWidth: '1200px',
-    margin: '0 auto',
-    textAlign: 'center',
-    width: '1200px',
-    borderTop: '2px solid rgba(0, 0, 0, 0.3)',
-  },
-  text: {
-    margin: '5px',
-    fontSize: '14px',
-    color: '#666',
-  },
-}
 
 export default Footer
-// <footer style={styles.footer}>
-    //   <div style={styles.container}>
-    //     <p style={styles.text}>© 2024 Byte Benders</p>
-    //     <p style={styles.text}>Terms of Service | Privacy Policy</p>
-    //   </div>
-    // </footer>

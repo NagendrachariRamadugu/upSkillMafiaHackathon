@@ -165,6 +165,9 @@ footer {
   flex-direction: row;
   gap: 1rem;
 }
+.linkedin, .git-hub {
+  color: black;
+}
 
 .copy-right-section {
   display: flex;

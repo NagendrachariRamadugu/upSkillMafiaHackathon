@@ -80,8 +80,7 @@
   font-weight: bold;
 }
 
-.small-text,
-.large-text {
+.small-text,.large-text {
   font-size: 1rem;
   color: gray;
   text-align: center;
@@ -95,6 +94,7 @@
   gap: 1.5rem;
 }
 
+
 .make-mentor-text {
   font-weight: bold;
   font-size: 2rem;
@@ -103,4 +103,83 @@
 .join-teach-community {
   color: gray;
   font-size: 1rem;
+}
+
+.mentorship-main {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.enter-details-text {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.mentorship-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 1.5rem;
+  width: 800px;
+  margin: auto;
+  border: 1px solid gray;
+}
+
+label {
+  font-size: 1rem;
+  color: gray;
+}
+
+#name-input, #email, #dob, #degree, #domain, #skills, #password, #confirm-password {
+  height: 2rem;
+  text-indent: 1rem;
+  border: 2px solid gray;
+  font-weight: bold;
+}
+
+#skills {
+  resize:vertical;
+  box-sizing: border-box;
+}
+#dob {
+  text-indent: 0.5rem;
+}
+
+#name-input:focus, #email:focus, #dob:focus, #degree:focus, #domain:focus, #skills:focus, #password:focus, 
+  #confirm-password:focus
+{
+  border: none;
+  outline: 3px solid black;
+  font-weight: bold;
+}
+
+.gender {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.gender div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gender-label {
+  font-weight: bold;
+  color: black;
+  font-size: 0.9rem;
+}
+
+#submit {
+  height: 2rem;
+  background-color: black;
+  color: white;
+  border-radius: 5rem;
+  border: none;
+  font-weight: bold;
 }
