@@ -1,4 +1,5 @@
 import {useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const MentorAboutDes = ({
     about, setAbout, des, setDes, id, setId, mentors, setMentors, addEdit, setAddEdit
@@ -13,8 +14,23 @@ const MentorAboutDes = ({
         navigate('/mentor/profile')
     }
     return (
-        <div className="contains-about-des-form">
-            <form className="about-des-form">
+        <div className = {(!id)? ('about-update-not-specific'): ("contains-about-des-form")}>
+            {
+                (!id)? (
+                    <>
+                    <p>Whoops &#128546;</p>
+                    <p>You are not specific about, where you would like to have the changes reflected in.</p>
+                    <p>Try visiting out mentor page to acknowledge us.</p>
+                    <Link style = {{
+                        textDecoration: 'none',
+                        color: 'white',
+                        padding: '1rem',
+                        backgroundColor: 'black'
+                    }}to = '/mentee'>Click here</Link>
+                    </>
+                ):
+                (
+                    <form className="about-des-form">
                 <label htmlFor="mentor-about">About</label>
                 <textarea 
                     type="text" 
@@ -52,6 +68,8 @@ const MentorAboutDes = ({
                     }} 
                 />
             </form>
+                )
+            }
         </div>
     )
 }

@@ -1,27 +1,62 @@
-import { Routes, Route, useNavigate } from 'react-router-dom'
+import './Mentee.css';
+import {useNavigate} from 'react-router-dom';
 
-import './Mentee.css'
-import MenteeSearch from './mentee/Filter'
-import Search from './mentee/Search'
-import CourseCard from './mentee/CourseCard'
+const Mentee = ({searchValue, setSearchvalue, mentors, setMentors, id, setId}) => {
 
-const Mentee = () => {
+  const navigate = useNavigate();
+
+  const handleClick = (key) => {
+    setId(key)
+    navigate('/mentor/profile')
+  } 
   return (
-    <div className="MenteeMain">
-      <div className="Mentee_Inner">
-        <div className="border_bottom">
-          <Search />
-          <div className="Test">
-            <MenteeSearch />
-            <MenteeSearch />
-          </div>
-        </div>
-        <div className="MenteeCourses">
-          <CourseCard />
-          <CourseCard />
-        </div>
+    <div className='mentee-page'>
+      <form className="mentor-search-input">
+        <label htmlFor="mentor-search">Search</label>
+        <input 
+          type="text"
+          id = 'mentor-search'
+          value = {searchValue}
+          name = 'mentor-search'
+          placeholder='Search for Mentors/courses'
+          onChange = {(e) => {
+            setSearchvalue(e.target.value)
+          }}
+        />
+      </form>
+      <br /><br /><br />
+      <div className='display-mentors'>
+          {(!mentors.length)?(
+            <div style = {{
+              textAlign: 'center',
+              fontSize: '1rem',
+              fontWeight: 'bold'
+            }}>
+              Can't find what you are looking for &#128546; !!
+            </div>
+          ):(
+            mentors.map(mentor => {
+              return (
+                <div className='each-mentor'>
+                  <p className='each-mentor-name'>{mentor.name}</p>
+                  <p>{mentor.domain}</p>
+                  <p>{mentor.degree}</p>
+                  <p>{mentor.skills}</p>
+                  <p>******/5</p>
+                  <button 
+                    className='go-to-profile'
+                    onClick={() => {
+                      handleClick(mentor.id)
+                    }}
+                  >Profile</button>
+                </div>
+              )
+            })
+          )}
+
       </div>
     </div>
   )
 }
-export default Mentee
+
+export default Mentee;

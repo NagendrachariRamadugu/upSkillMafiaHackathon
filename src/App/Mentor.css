@@ -331,3 +331,15 @@ label {
   object-fit: cover;
   object-position: center;
 }
+
+.about-update-not-specific {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  color: gray;
+  font-size: 1rem;
+}

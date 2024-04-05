@@ -12,9 +12,7 @@ const MentorProfile = ({
                 {
                     (!id)?(
                         <>
-                            <p className="unavailable">No Mentors available &#128546;. 
-                                Well that is disappointing. 
-                                Return to our home page.</p>
+                            <p className="unavailable">Are you specific whom you are searching for &#128546; ?</p>
                             <Link className = "sad-home" to = '/'>Home</Link>
                         </>
                     ):

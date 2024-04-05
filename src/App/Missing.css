@@ -1,0 +1,16 @@
+.missing-div {
+    padding: 5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    color: gray;
+    font-size: 1rem;
+}
+
+.miss-to-home-button {
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
