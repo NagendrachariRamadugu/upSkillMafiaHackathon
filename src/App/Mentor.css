@@ -183,3 +183,151 @@ label {
   border: none;
   font-weight: bold;
 }
+
+.no-mentors, .mentors-are-there {
+  padding: 1rem;
+}
+
+.no-mentors {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.unavailable {
+  color: gray;
+  font-size: 1rem;
+}
+
+.sad-home {
+  text-decoration: none;
+  padding: 1rem;
+  color: white;
+  font-size: 1rem;
+  background-color: black;
+}
+
+.mentor-basic-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid lightgray;
+  padding: 0rem 5rem;
+}
+
+.mentor-bio {
+  color: gray;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 1rem;
+  padding: 2rem 3rem;
+  border-left: 3px solid black;
+}
+
+.mentor-avatar {
+  width: 150px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#male-mentor {
+  background-image: url('../assets/male-mentor-avatar.jpeg');
+}
+
+#female-mentor {
+  background-image: url('../assets/female-mentor-avatar.jpg');
+}
+
+.mentor-about-des {
+  padding: 1rem 5rem;
+  border: 2px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about-its-info, .des-its-info {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+.about-its-label, .des-its-label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.about-its-matter, .des-its-matter {
+  font-size: 0.9rem;
+  color: gray;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  background-color: rgb(239, 239, 239);
+  /* border: 0.1px solid lightgray; */
+}
+
+.contains-about-des-form {
+  padding: 3rem;
+}
+
+.about-des-form {
+  margin: auto;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid gray;
+}
+.about-des-form label {
+  color: gray;
+  font-size: 1rem;
+}
+
+#mentor-about, #mentor-des {
+  border: 3px solid gray;
+  height: 100px;
+  box-sizing: border-box;
+  resize: vertical;
+  width: 100%;
+  text-indent: 1rem;
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+#mentor-about:focus, #mentor-des:focus {
+  outline: 3px solid black;
+  border: none;
+
+}
+
+.about-des-submit {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.mentor-videos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 2px solid lightgray;
+}
+
+.menvdo-frame {
+  height: 250px;
+  width: 450px;
+  object-fit: cover;
+  object-position: center;
+}

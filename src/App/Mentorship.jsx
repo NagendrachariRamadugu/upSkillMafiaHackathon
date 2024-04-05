@@ -1,21 +1,34 @@
-import React from "react"
-import {useState, useEffect} from 'react';
-import {useNavigate } from "react-router-dom";
-import {format} from 'date-fns';
+import { format } from "date-fns"
+import { useState, useEffect } from "react"
+import {useNavigate} from 'react-router-dom';
 
-const MentorLogin = () => {
+ 
+const Mentorship = ({
+    mentors, setMentors, id, setId
+}) => {
     const currentDate = new Date ()
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [dob, setDob] = useState(format(currentDate, 'yyyy-MM-dd'))
-    const [gender, setGender] = useState('')
-    const [degree, setDegree] = useState('')
-    const [domain, setDomain] = useState('')
+    const [gender, setGender] = useState('male')
+    const [degree, setDegree] = useState('Intermediate/diploma')
+    const [domain, setDomain] = useState('Machine Learning')
     const [skills, setSkills] = useState('')
     const [password, setPassword] = useState('')
     const [conPassword, setConPassword] = useState('')
     const navigate = useNavigate()
-
+    const [checked, setChecked] = useState(true)
+    
+    const handleSubmit = () => {
+        const mentorId = (mentors.length)? (mentors[mentors.length -1].id + 1): (1)
+        const mentor = {
+            id: mentorId, name, email, dob, gender, degree, domain, skills, password,
+            about: '', descripton: ''
+        }
+        setMentors([...mentors, mentor])
+        setId(mentorId)
+        navigate('/mentor/profile')
+    }
     return (
         <div className="mentorship-main">
             <div className="enter-details-text">Please enter your details</div>
@@ -61,8 +74,10 @@ const MentorLogin = () => {
                             id = 'male' 
                             name = 'gender' 
                             value = 'male'
+                            checked = {checked}
                             onChange = {(e) => {
-                                setGender(e.target.value)                            
+                                setGender(e.target.value)   
+                                setChecked(true)                       
                             }}
                         />
                     </div>
@@ -72,21 +87,11 @@ const MentorLogin = () => {
                             type = 'radio' 
                             id = 'female' 
                             name = 'gender'
+                            checked = {!checked}
                             value = 'female'
                             onChange = {(e) => {
                                 setGender(e.target.value)
-                            }}
-                        />
-                    </div>
-                    <div>
-                        <label className = 'gender-label' htmlFor="prefer-not-to-say">prefer-not-to-say</label>
-                        <input 
-                            type = 'radio' 
-                            id = 'prefer-not-to-say' 
-                            name = 'gender'
-                            value = 'prefer-not-to-say'
-                            onChange = {(e) => {
-                                setGender(e.target.value)
+                                setChecked(false)
                             }}
                         />
                     </div>
@@ -149,13 +154,19 @@ const MentorLogin = () => {
                     required
                 />
                 <input 
-                    type="submit" 
-                    value = 'Submit'
-                    name = 'submit' 
+                    type = 'submit'
                     id = 'submit'
                     onClick={(e) => {
+                        e.preventDefault()
                         if(conPassword != password) {
                             alert("Passwords do not match");
+                            return 
+                        }
+                        if (name && email && password && conPassword && skills && email.includes('@')) {
+                            handleSubmit()
+                        } 
+                        else {
+                            alert('Please provide all the feilds' )
                         }
                     }}
                 />
@@ -163,4 +174,4 @@ const MentorLogin = () => {
         </div>
     )
 }
-export default MentorLogin
+export default Mentorship
