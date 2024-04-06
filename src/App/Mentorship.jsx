@@ -4,7 +4,7 @@ import {useNavigate} from 'react-router-dom';
 
  
 const Mentorship = ({
-    mentors, setMentors, id, setId
+    mentors, setMentors, id, setId, mentees, setMentees
 }) => {
     const currentDate = new Date ()
     const [name, setName] = useState('')
@@ -27,6 +27,12 @@ const Mentorship = ({
         }
         setMentors([...mentors, mentor])
         setId(mentorId)
+        setName('')
+        setEmail('')
+        setSkills('')
+        setPassword('')
+        setConPassword('')
+
         navigate('/mentor/profile')
     }
     return (
@@ -160,9 +166,18 @@ const Mentorship = ({
                         e.preventDefault()
                         if(conPassword != password) {
                             alert("Passwords do not match");
-                            return 
                         }
-                        if (name && email && password && conPassword && skills && email.includes('@')) {
+                        else if (
+                            mentors.find((mentor) => (
+                                mentor.email === email
+                            )) ||
+                            mentees.find((mentee) => (
+                                mentee.email == email
+                            ))
+                        ) {
+                            alert('User already exists')
+                        }
+                        else if (name && email && password && conPassword && skills && email.includes('@')) {
                             handleSubmit()
                         } 
                         else {

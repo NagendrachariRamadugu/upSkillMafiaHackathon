@@ -1,0 +1,38 @@
+.mentee-sign-up-form {
+    width: 600px;
+    margin: auto;
+    padding: 5rem;
+    border: 2px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.mentee-sign-up-text {
+    text-align: center;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.mentee-sign-up-form input {
+    height: 2rem;
+    border: 2px solid gray;
+    text-indent: 1rem;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.mentee-sign-up-form input:focus {
+    outline: 2px solid black;
+    border: none;
+}
+
+.mentee-sign-up-link-button {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}

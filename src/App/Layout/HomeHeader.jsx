@@ -2,7 +2,9 @@ import { Link } from 'react-router-dom'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { useState } from 'react'
 
-const HomeHeader = () => {
+const HomeHeader = ({
+  signUpText, setSignUpText
+}) => {
   const [closed, setClosed] = useState(false)
 
   const handleHamClick = () => {
@@ -26,8 +28,23 @@ const HomeHeader = () => {
           <Link to="/mentee" className="button">
             Search Mentor
           </Link>
-          <Link to="#" className="button">
-            Sign Up
+          <Link to= {
+            (signUpText === 'Sign Up')?
+            ('/login'):
+            ('#')
+          }
+           tooltip = 
+            {
+              (signUpText === 'Sign Up')?
+              (''):
+              ('Profile')
+            }
+          className = {
+            (signUpText === 'Sign Up')?
+            ('button'):
+            ('profile')
+          }>
+            {signUpText}
           </Link>
         </div>
         {!closed && (

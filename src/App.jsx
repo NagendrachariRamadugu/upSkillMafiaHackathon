@@ -10,13 +10,25 @@ import MentorAboutDes from './App/MentorAboutDes.jsx'
 import Missing from './App/Missing.jsx';
 import { useEffect, useState } from 'react'
 import { MentorsDataBase } from './App/MentorsDatabase.jsx'
+import SignInSignUp from './App/SignInSignUp.jsx'
+import MenteeSignup from './App/MenteeSignup.jsx'
+import { MenteesDataBase } from './App/MenteesDataBase.jsx'
 
 function App() {
 
   const [mentors, setMentors] = useState(
       JSON.parse(localStorage.getItem('MentorsDataBase')) ||
-      JSON.stringify(MentorsDataBase)
+      (MentorsDataBase)
     )
+    
+  const [mentees, setMentees]  = useState(
+    JSON.parse(localStorage.getItem('MenteesDataBase'))||
+    MenteesDataBase
+  )
+
+  useEffect(() => {
+    localStorage.setItem('MenteesDataBase', JSON.stringify(mentees))
+  }, [mentees])
 
   useEffect(() => {
     localStorage.setItem('MentorsDataBase', JSON.stringify(mentors))
@@ -27,18 +39,56 @@ function App() {
   const [des, setDes] = useState('')
   const [addEdit, setAddEdit] = useState('Add More Info')
   const [searchValue, setSearchvalue] = useState('')
+  const [menteeName, setMenteeName] = useState('')
+  const [menteeEmail, setMenteeEmail] = useState('')
+  const [menteePwd, setMenteePwd] = useState('')
+  const [menteeConPwd, setMenteeConPwd] = useState('')
+  const [signUpText, setSignUpText] = useState('Sign Up')
+  const [userEmail, setUserEmail] = useState('')
+  const [userPwd, setUserPwd] = useState('')
 
   return (
     <>
     <Routes>
-      <Route path="/" element={<HomeLayout />}>
+      <Route path="/" element={<HomeLayout 
+        signUpText = {signUpText}
+        setSignUpText = {setSignUpText}
+      />}>
         <Route index element={<HomeMain />} />
         <Route path = '/mentor' element = {<Mentor/>}/>
-        <Route path = '/mentor/login' element = {<Mentorship
+        <Route path = '/mentor/signup' element = {<Mentorship
           mentors = {mentors}
           setMentors = {setMentors}
           id = {id}
           setId = {setId}
+          mentees = {mentees}
+          setMentees = {setMentees}
+        />}/>
+        <Route path = '/mentee/signup' element = {<MenteeSignup 
+          mentors = {mentors}
+          setMentors = {setMentors}
+          mentees = {mentees}
+          setMentees = {setMentees}
+          menteeName = {menteeName}
+          setMenteeName = {setMenteeName}
+          menteeEmail = {menteeEmail}
+          setMenteeEmail = {setMenteeEmail}
+          menteePwd = {menteePwd}
+          setMenteePwd = {setMenteePwd}
+          menteeConPwd = {menteeConPwd}
+          setMenteeConPwd = {setMenteeConPwd}
+          signUpText = {signUpText}
+          setSignUpText = {setSignUpText}
+        />}/>
+        <Route path = '/login' element = {<SignInSignUp 
+          userEmail = {userEmail}
+          setUserEmail = {setUserEmail}
+          userPwd = {userPwd}
+          setUserPwd = {setUserPwd}
+          mentees = {mentees}
+          mentors = {mentors}
+          signUpText = {signUpText}
+          setSignUpText = {setSignUpText}
         />}/>
         <Route path = 'mentor/profile' element = {<MentorProfile
           id = {id}

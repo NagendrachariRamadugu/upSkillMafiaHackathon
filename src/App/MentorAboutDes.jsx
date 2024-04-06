@@ -11,6 +11,8 @@ const MentorAboutDes = ({
             (id !== mentor.id)?(mentor):({...mentor, description:des, about})
         )))
         setAddEdit('Edit')
+        setAbout('')
+        setDes('')
         navigate('/mentor/profile')
     }
     return (

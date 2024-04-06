@@ -45,7 +45,7 @@ header .navbar {
   gap: 1rem;
 }
 
-.button {
+.button, .profile {
   text-decoration: none;
   padding: 0.5rem 1rem;
   color: gray;
