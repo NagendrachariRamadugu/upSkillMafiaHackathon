@@ -15,7 +15,7 @@ const Mentor = () => {
                     <p className='become-ins-text'>
                         Become an instructor and change lives — including your own
                     </p>
-                    <Link className='get-started-button'>Get Started</Link>
+                    <Link to ='/mentor/login' className='get-started-button'>Get Started</Link>
                 </div>
             </div>    
             <br /><br /><br />
@@ -67,7 +67,7 @@ const Mentor = () => {
                 <div className='join-teach-community'>
                     Join the Teaching community of byteBenders
                 </div>
-                <Link className='get-started-button'>Get Started</Link>
+                <Link  to = '/mentor/login' className='get-started-button'>Get Started</Link>
             </div>
         </div>
     )

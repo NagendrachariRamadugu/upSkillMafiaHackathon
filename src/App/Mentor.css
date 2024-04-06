@@ -182,6 +182,7 @@ label {
   border-radius: 5rem;
   border: none;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .no-mentors, .mentors-are-there {

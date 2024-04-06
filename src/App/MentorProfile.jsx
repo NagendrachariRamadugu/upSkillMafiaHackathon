@@ -13,7 +13,7 @@ const MentorProfile = ({
                     (!id)?(
                         <>
                             <p className="unavailable">Are you specific whom you are searching for &#128546; ?</p>
-                            <Link className = "sad-home" to = '/'>Home</Link>
+                            <Link className = "sad-home" to = '/mentee'>Click here</Link>
                         </>
                     ):
                     (

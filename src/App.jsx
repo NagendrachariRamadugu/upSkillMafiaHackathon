@@ -8,47 +8,20 @@ import MentorProfile from './App/MentorProfile.jsx'
 import { Routes, Route } from 'react-router-dom'
 import MentorAboutDes from './App/MentorAboutDes.jsx'
 import Missing from './App/Missing.jsx';
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { MentorsDataBase } from './App/MentorsDatabase.jsx'
 
 function App() {
-  const [mentors, setMentors] = useState([
-    { id: 1,
-      name: 'Ramadugu Nagendra Chari',
-      email: 'nagendrachariramadugu@gmail.com',
-      gender: 'male',
-      dob: '2002-08-02',  
-      degree: 'B-Tech',
-      domain: 'Full Stack Development',
-      skills: 'Problem Solving',
-      password: 'chari@2002',
-      about: '',
-      description: ''
-    },
-    { id: 2,
-      name: 'Ramadugu Nagendra Chari',
-      email: 'nagendrachariramadugu@gmail.com',
-      gender: 'male',
-      dob: '2002-08-02',  
-      degree: 'B-Tech',
-      domain: 'Full Stack Development',
-      skills: 'Problem Solving',
-      password: 'chari@2002',
-      about: '',
-      description: ''
-    },
-    { id: 3,
-      name: 'Ramadugu Nagendra Chari',
-      email: 'nagendrachariramadugu@gmail.com',
-      gender: 'male',
-      dob: '2002-08-02',  
-      degree: 'B-Tech',
-      domain: 'Full Stack Development',
-      skills: 'Problem Solving',
-      password: 'chari@2002',
-      about: '',
-      description: ''
-    }
-  ])
+
+  const [mentors, setMentors] = useState(
+      JSON.parse(localStorage.getItem('MentorsDataBase')) ||
+      JSON.stringify(MentorsDataBase)
+    )
+
+  useEffect(() => {
+    localStorage.setItem('MentorsDataBase', JSON.stringify(mentors))
+  }, [mentors])
+
   const [id, setId] = useState(0)
   const [about, setAbout] = useState('')
   const [des, setDes] = useState('')
