@@ -36,6 +36,16 @@ main {
     padding: 1rem 0.5rem;
     text-decoration: none;
 }
+
+@media (max-width: 700px) {
+    .hero-image-section {
+        height: 400px;
+    }
+    .hero-image-div {
+        transform: translate(60px, 100px);
+    }   
+}
+
 .goals {
     display: flex;
     flex-direction: column;

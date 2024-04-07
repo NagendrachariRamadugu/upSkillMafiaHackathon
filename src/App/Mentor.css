@@ -42,6 +42,79 @@
   font-size: 0.9rem;
 }
 
+@media (max-width: 1440px) { 
+  .hero-image-content {
+    transform: translate(20%, 100%);
+    width: 30rem;
+  }
+  .hero-image {
+    height: 500px;
+  }
+
+  .become-ins-text {
+    font-size: 0.9rem;
+  }
+
+  .get-started-button {
+    font-size: 0.7rem;
+  }
+  
+}
+@media (max-width: 1150px) {
+  .hero-image {
+    height: 450px;
+  }
+
+  .hero-image-content {
+    transform: translate(10%, 100%);
+    width: 25rem;
+  }
+
+  .teach-us-text {
+    font: 1rem;
+  }
+
+  .become-ins-text {
+    font-size: 0.8rem;
+  }
+
+  .get-started-button {
+    font-size: 0.6rem;
+  }
+
+  .reason {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-image {
+    height: 400px;
+  }
+
+  .hero-image-content {
+    transform: translate(10%, 50%);
+    width: 20rem;
+  }
+
+  .become-ins-text {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero-image {
+    height: 350px;
+  }
+
+  .hero-image-content {
+    transform: translate(10%, 30%);
+    width: 15rem;
+  }
+  
+}
+
+
 .reasons {
   display: flex;
   flex-direction: column;
@@ -86,6 +159,12 @@
   text-align: center;
 }
 
+@media (max-width: 1000px) {
+  .small-text, .large-text {
+    font-size: 0.8rem;
+  } 
+}
+
 .become-mentor {
   display: flex;
   flex-direction: column;
@@ -126,6 +205,24 @@
   width: 800px;
   margin: auto;
   border: 1px solid gray;
+}
+
+@media (max-width: 900px) { 
+  .mentorship-form {
+    width: 700px;
+  }
+}
+  
+@media (max-width: 700px) {
+  .mentorship-form {
+    width: 600px;
+  }
+}   
+
+@media (max-width: 500px) {
+  .mentorship-form {
+    width: 400px;
+  }
 }
 
 label {
@@ -286,6 +383,30 @@ label {
   padding: 1rem;
   border: 1px solid gray;
 }
+
+@media (max-width: 900px) {
+  .about-des-form {
+    width: 700px;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-des-form {
+    width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-des-form {
+    width: 400px;
+  }
+}
+@media (max-width: 400px) {
+  .about-des-form {
+    width: 300px;
+  }
+}
+
 .about-des-form label {
   color: gray;
   font-size: 1rem;
@@ -320,18 +441,13 @@ label {
 .mentor-videos-grid {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding: 1rem;
+  gap: 1rem;
   border: 2px solid lightgray;
+  align-items: center;
 }
 
-.menvdo-frame {
-  height: 250px;
-  width: 450px;
-  object-fit: cover;
-  object-position: center;
-}
 
 .about-update-not-specific {
   height: 500px;
@@ -343,4 +459,44 @@ label {
   justify-content: center;
   color: gray;
   font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  .mentor-basic-info {
+    padding: 0rem 3rem;
+  }
+
+  .mentor-bio {
+    font-size: 0.8rem;
+  }
+
+  .mentor-avatar {
+    width: 120px;
+    height: 120px;
+  }
+
+
+}
+
+@media (max-width: 900px) {
+  .mentor-basic-info {
+    padding: 0rem 2rem;
+  }
+
+  .mentor-bio {
+    font-size: 0.6rem;
+  }
+
+  .mentor-name-profile-page {
+    font-size: 1rem;
+  }
+
+  .mentor-avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .about-its-label, .des-its-label {
+    font-size: 0.8rem;
+  }
 }

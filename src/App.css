@@ -175,3 +175,14 @@ footer {
   align-items: center;
   padding: 1.5rem;
 }
+
+@media (max-width: 1000px) {
+  .name,
+  .shake-hand div,
+  .email-image-text div,
+  .gmail,
+  .info,
+  .copy-right-section {
+    font-size: 0.8rem;
+  }
+}

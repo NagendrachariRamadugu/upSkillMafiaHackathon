@@ -5,6 +5,18 @@
     border: 2px solid lightgray;
 }
 
+@media (max-width: 900px) {
+    .user-login-page {
+        width: 500px;
+    }
+}
+
+@media (max-width: 700px) {
+    .user-login-page {
+        width: 400px;
+    }
+}
+
 .login-text {
     text-align: center;
     color: black;

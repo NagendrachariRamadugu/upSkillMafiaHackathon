@@ -8,6 +8,18 @@
     gap: 1.5rem;
 }
 
+@media (max-width: 900px) {
+    .mentee-sign-up-form {
+        width: 500px;
+    }
+}
+
+@media (max-width: 700px) {
+    .mentee-sign-up-form {
+        width: 400px;
+    }
+}
+
 .mentee-sign-up-text {
     text-align: center;
     color: black;

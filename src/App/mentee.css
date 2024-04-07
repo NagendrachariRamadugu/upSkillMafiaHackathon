@@ -40,6 +40,30 @@
   border: 1px solid gray;
 }
 
+@media (max-width: 900px) {
+  .mentor-search-input, .display-mentors {
+    width: 700px;
+  }
+}
+
+@media (max-width: 750px) {
+  .mentor-search-input, .display-mentors {
+    width: 600px;
+  }
+}
+
+@media (max-width: 650px) {
+  .mentor-search-input, .display-mentors {
+    width: 500px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mentor-search-input, .display-mentors {
+    width: 400px;
+  }
+}
+
 .each-mentor {
   padding: 1rem;
   border: 1px solid lightgray;
