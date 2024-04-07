@@ -33,12 +33,6 @@ const HomeHeader = ({
             ('/login'):
             ('#')
           }
-           tooltip = 
-            {
-              (signUpText === 'Sign Up')?
-              (''):
-              ('Profile')
-            }
           className = {
             (signUpText === 'Sign Up')?
             ('button'):
@@ -56,9 +50,18 @@ const HomeHeader = ({
               <Link to="/mentee" className="button">
                 Search Mentor
               </Link>
-              <Link to="#" className="button">
-                Sign Up
-              </Link>
+            <Link to= {
+              (signUpText === 'Sign Up')?
+              ('/login'):
+              ('#')
+            }
+            className = {
+              (signUpText === 'Sign Up')?
+              ('button'):
+              ('profile')
+            }>
+              {signUpText}
+            </Link>
             </div>
           </div>
         )}
