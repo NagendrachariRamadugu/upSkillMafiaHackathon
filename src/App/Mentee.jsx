@@ -1,4 +1,4 @@
-import './Mentee.css';
+import './mentee.css';
 import {useNavigate} from 'react-router-dom';
 
 const Mentee = ({searchValue, setSearchvalue, mentors, setMentors, id, setId}) => {
