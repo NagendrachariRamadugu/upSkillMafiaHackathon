@@ -57,25 +57,25 @@ const SignInSignUp = ({
                                 alert('Please enter required fields')
                             } 
                             else if (
-                                (mentors.find((mentor) => {
+                                !(mentors.find((mentor) => (
                                     mentor.email === userEmail
-                                })) ||
-                                (
-                                    mentees.find((mentee) => {
+                                ))) &&
+                                !(
+                                    mentees.find((mentee) => (
                                         mentee.email === userEmail
-                                    })
+                                    ))
                                 )
                             ) {
                                 alert('The email is not registered with us')
                             }
                             else if (
-                                (mentors.find((mentor) => {
+                                !(mentors.find((mentor) => (
                                     mentor.password === userPwd
-                                })) ||
-                                (
-                                    mentees.find((mentee) => {
+                                ))) &&
+                                !(
+                                    mentees.find((mentee) => (
                                         mentee.password === userPwd
-                                    })
+                                    ))
                                 )
                             ) {
                                 alert('Wrong Password')

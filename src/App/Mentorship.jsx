@@ -27,12 +27,6 @@ const Mentorship = ({
         }
         setMentors([...mentors, mentor])
         setId(mentorId)
-        setName('')
-        setEmail('')
-        setSkills('')
-        setPassword('')
-        setConPassword('')
-
         navigate('/mentor/profile')
     }
     return (
@@ -167,21 +161,18 @@ const Mentorship = ({
                         if(conPassword != password) {
                             alert("Passwords do not match");
                         }
+                        else if (!name || !email || !password || !conPassword || !skills || !email.includes('@')) {
+                            alert('Please provide all the feilds' )
+                        } 
                         else if (
                             mentors.find((mentor) => (
                                 mentor.email === email
-                            )) ||
-                            mentees.find((mentee) => (
-                                mentee.email == email
                             ))
                         ) {
                             alert('User already exists')
                         }
-                        else if (name && email && password && conPassword && skills && email.includes('@')) {
-                            handleSubmit()
-                        } 
                         else {
-                            alert('Please provide all the feilds' )
+                            handleSubmit();
                         }
                     }}
                 />

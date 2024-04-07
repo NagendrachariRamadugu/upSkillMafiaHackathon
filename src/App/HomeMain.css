@@ -1,0 +1,163 @@
+main {
+    padding: 3rem;
+}
+
+.hero-image-section {
+    background-image: url('../assets/MainPageHeroImage.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+}
+.hero-image-div {
+    transform: translate(200px, 150px);
+    font-size: 1rem;
+    font-weight: bold;
+    width: 400px;
+    border: 1px solid lightgray;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.hero-image-div div {
+    padding: 0.5rem;
+}
+
+.hero-image-div .find-expert {
+    background-color: rgb(70, 70, 70);
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+}
+.goals {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 1000px;
+    margin: auto;
+    align-items: center;
+    border: 1px solid lightgray;
+    padding: 3rem;
+}
+
+.focus-on-goals {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+
+.goal {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+.goal-icon {
+    font-size: 1.5rem;
+}
+
+.goal div {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.goal-text {
+    color: black;
+    font-weight: bold;
+}
+
+.goal-des {
+    color: gray;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 1000px;
+    margin: auto;
+    padding: 3rem;
+    border: 1px solid lightgray;
+}
+
+.pricing-text {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.pricing-des {
+    font-size: 1rem;
+    color: gray;
+}
+
+.pricing-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    border: 1px solid lightgray;
+}
+
+.plan-type {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: rgb(230, 230, 230);
+}
+
+.plan-type-text {
+    font-weight: bold;
+}
+
+.plan-type-icon {
+    font-size: 0.9rem;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-info {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+    color: gray;
+    font-size: 0.9rem;
+}
+
+.card-price {
+    color: black;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.releases {
+    background-color: rgb(70, 70, 70);
+    padding: 0.5rem;
+    color: white;
+}
+
+.dot {
+    color: black;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.dot-p {
+    display: flex;
+    align-items: center;
+}

@@ -80,9 +80,6 @@ const MenteeSignup= ({
                             alert("Please fill the required fields")
                         }
                         else if (
-                            (mentors.find((mentor) => (
-                                mentor.email === menteeEmail
-                            ))) ||
                             (mentees.find((mentee) => (
                                 mentee.email === menteeEmail
                             )))

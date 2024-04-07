@@ -8,11 +8,9 @@ const MentorAboutDes = ({
 
     const handleSubmit = () => {
         setMentors(mentors.map((mentor) => (
-            (id !== mentor.id)?(mentor):({...mentor, description:des, about})
+            (id !== mentor.id)?(mentor):({...mentor, about: des, description:about})
         )))
         setAddEdit('Edit')
-        setAbout('')
-        setDes('')
         navigate('/mentor/profile')
     }
     return (
